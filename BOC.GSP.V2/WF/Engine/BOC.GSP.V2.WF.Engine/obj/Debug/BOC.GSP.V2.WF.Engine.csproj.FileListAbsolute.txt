@@ -60,4 +60,3 @@ E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Engine\BOC.GSP.V2.WF.Engine\obj\Debug\InProcessTempFiles\WFInstance.g.xaml
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Engine\BOC.GSP.V2.WF.Engine\obj\Debug\InProcessTempFiles\_BOC.GSP.V2.WF.Engine.g.cs
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Engine\BOC.GSP.V2.WF.Engine\bin\Debug\BOC.GSP.V2.WF.Engine.dll.config
-E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Engine\BOC.GSP.V2.WF.Engine\obj\Debug\BOC.GSP.V2.WF.Engine.csproj.FileListAbsolute.txt
