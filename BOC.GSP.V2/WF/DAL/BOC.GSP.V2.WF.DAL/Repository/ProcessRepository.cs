@@ -76,6 +76,14 @@ namespace BOC.GSP.V2.WF.DAL.Repository
                 return conn.Query<ProcesssInstance>(sqlStr, new { Id = instanceId }).SingleOrDefault();
             }
         }
+        public static List<ProcesssInstance> GetAllProcessInstance()
+        {
+            var sqlStr = @"  SELECT  * From ProcesssInstance where  status=1";
+            using (var conn = Database.DbService())
+            {
+                return conn.Query<ProcesssInstance>(sqlStr).ToList();
+            }
+        }
         public static ProcesssInstance GetProcessInstanceByWorkItemId(Guid workid)
         {
             var sqlStr = @"select p.* from ProcesssInstance p

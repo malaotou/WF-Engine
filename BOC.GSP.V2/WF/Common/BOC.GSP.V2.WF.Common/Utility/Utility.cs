@@ -1,6 +1,7 @@
 ﻿using BOC.GSP.V2.WF.Common.Models;
 using BOC.GSP.V2.WF.Common.Variable;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -96,6 +97,12 @@ namespace BOC.GSP.V2.WF.Common.Utility
 
         public async static Task<List<String>> CallFunction(FunctionCallPara para)
         {
+            var businessData = para.BusinessData;
+            var configData = para.ConfigData;
+            JObject bData = JObject.Parse(businessData);
+            JObject cData = JObject.Parse(configData);
+
+
 
             //HttpRequestMessage request = new HttpRequestMessage();
             //MediaTypeFormatter[] formatter = new MediaTypeFormatter[] { new JsonMediaTypeFormatter() };
@@ -113,6 +120,45 @@ namespace BOC.GSP.V2.WF.Common.Utility
         public static string SerializeToString(dynamic data)
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(data);
+        }
+        public static void ProcessJTokent(JToken configToken, JObject dataObject, ref JToken configCopy)
+        {
+            if (configToken.Children().Count() > 0)
+            {
+                foreach (var item in configToken)
+                {
+                    if (item.Children().Count() > 0)
+                    {
+                        ProcessJTokent(item, dataObject, ref configCopy);
+                    }
+                    else
+                    {
+                        JToken t = dataObject.SelectToken(item.Path);
+                        // Find the ConfigPath
+                        var configPath = item.ToObject<string>();
+                        // Find the Value
+                        if (configPath.StartsWith("@"))
+                        {
+                            var dataValue = dataObject.SelectToken(configPath.Substring(1));
+                            configCopy.SelectToken(item.Path).Replace(JToken.FromObject(dataValue.ToObject<string>()));
+                        }
+
+                    }
+                }
+            }
+            else
+            {
+                //Find the Config Path
+                var configPath = configToken.ToObject<string>();
+                if (configPath.StartsWith("@"))
+                {
+                    // Find the value
+                    var dataValue = dataObject.SelectToken(configPath.Substring(1));
+                    configCopy.SelectToken(configToken.Path).Replace(JToken.FromObject(dataValue.ToObject<string>()));
+                }
+
+            }
+
         }
 
     }

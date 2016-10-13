@@ -1,3 +1,4 @@
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\obj\Debug\BOC.GSP.V2.WF.WebApi.csprojResolveAssemblyReference.cache
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\ApplicationInsights.config
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\roslyn\csc.exe
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -15,6 +16,9 @@ E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.WebApi.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.WebApi.pdb
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Antlr3.Runtime.dll
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.Common.dll
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.DAL.dll
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.Engine.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\EntityFramework.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\EntityFramework.SqlServer.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Microsoft.AI.Agent.Intercept.dll
@@ -52,6 +56,11 @@ E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\System.Web.WebPages.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\System.Web.WebPages.Razor.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\WebGrease.dll
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Dapper.SimpleCRUD.dll
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Dapper.dll
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.Common.pdb
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.DAL.pdb
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.Engine.pdb
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Microsoft.AI.DependencyCollector.xml
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Microsoft.AI.Web.xml
@@ -85,6 +94,9 @@ E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Microsoft.Owin.Security.Twitter.xml
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\System.Web.Http.Owin.xml
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Dapper.SimpleCRUD.pdb
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Dapper.SimpleCRUD.xml
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Dapper.xml
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\zh-Hans\System.Web.Helpers.resources.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\zh-Hans\System.Web.Http.resources.dll
@@ -107,17 +119,5 @@ E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\zh-Hans\System.Web.Http.Owin.resources.dll
-E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\obj\Debug\BOC.GSP.V2.WF.WebApi.csprojResolveAssemblyReference.cache
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\obj\Debug\BOC.GSP.V2.WF.WebApi.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\obj\Debug\BOC.GSP.V2.WF.WebApi.pdb
-E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.Common.dll
-E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.DAL.dll
-E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.Engine.dll
-E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Dapper.SimpleCRUD.dll
-E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Dapper.dll
-E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.Common.pdb
-E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.DAL.pdb
-E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\BOC.GSP.V2.WF.Engine.pdb
-E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Dapper.SimpleCRUD.pdb
-E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Dapper.SimpleCRUD.xml
-E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\API\BOC.GSP.V2.WF.WebApi\bin\Dapper.xml

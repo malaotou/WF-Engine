@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bb888884-38e0-47c6-8b19-89767cef5bb3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7742/FunctionCallService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FunctionCallService.wsdl" MetadataType="Wsdl" ID="cdfc28e6-cccf-4d4b-86c9-b9c720f98bef" SourceId="1" SourceUrl="http://localhost:7742/FunctionCallService.svc?wsdl" />
+    <MetadataFile FileName="FunctionCallService.disco" MetadataType="Disco" ID="8b971575-15e9-4d82-b3a1-1a6f329f580a" SourceId="1" SourceUrl="http://localhost:7742/FunctionCallService.svc?disco" />
+    <MetadataFile FileName="FunctionCallService1.xsd" MetadataType="Schema" ID="cd955971-85cf-46a0-83e7-775361a43fab" SourceId="1" SourceUrl="http://localhost:7742/FunctionCallService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FunctionCallService.xsd" MetadataType="Schema" ID="9b2d5376-0a7a-4013-b2d6-33880bd0cde5" SourceId="1" SourceUrl="http://localhost:7742/FunctionCallService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FunctionCallService3.xsd" MetadataType="Schema" ID="2448fc87-17ba-44b5-9be3-4c82cfe37923" SourceId="1" SourceUrl="http://localhost:7742/FunctionCallService.svc?xsd=xsd3" />
+    <MetadataFile FileName="FunctionCallService2.xsd" MetadataType="Schema" ID="a8409eb0-f595-4bb5-b633-fe7ccc8ed134" SourceId="1" SourceUrl="http://localhost:7742/FunctionCallService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

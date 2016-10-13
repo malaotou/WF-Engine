@@ -47,7 +47,7 @@ namespace BOC.GSP.V2.WF.Engine.Act
 
             //获取下一节点数据；
             var nextActivity = ActivityRepository.GetNextActivityByActivityId(para.ActId, para.ProcessID, actionType);
-            
+
             List<string> Approvers = null;
             //获取当前节点审批人信息
             if (para.Approvers != null)
@@ -66,6 +66,7 @@ namespace BOC.GSP.V2.WF.Engine.Act
                 {
                     // 暂行方案
                     Approvers = ActivityRepository.GetApprover(currentActivity.ApproveObjectType, currentActivity.ApproveObjectCode);
+                    //如果审批人信息为空，则？
                 }
                 else if (currentActivity.ApproveObjectType == "2")
                 {
@@ -77,12 +78,12 @@ namespace BOC.GSP.V2.WF.Engine.Act
                     funcationPara.BusinessData = currentProcess.BusinessData;
                     // 流程数据暂无处理
 
-                    var url = await Utility.CallFunction(funcationPara);
+                    // 异常处理需加上
+                    FunctionCallService.FunctionCallServiceClient client = new FunctionCallService.FunctionCallServiceClient();
+                    Approvers= client.CallFunction(funcationPara).ToList();
                 }
 
             }
-
-
             List<NextActivity> acts = new List<NextActivity>();
             //更新相关参数
             if (nextActivity.Count > 0)

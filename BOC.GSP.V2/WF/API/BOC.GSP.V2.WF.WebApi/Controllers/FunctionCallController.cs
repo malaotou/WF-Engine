@@ -1,4 +1,5 @@
 ﻿using BOC.GSP.V2.WF.Common.Models;
+using BOC.GSP.V2.WF.Common.Utility;
 using BOC.GSP.V2.WF.WebApi.Helper;
 using Newtonsoft.Json.Linq;
 using System;
@@ -28,12 +29,14 @@ namespace BOC.GSP.V2.WF.WebApi.Controllers
             try
             {
                 // 参数空，返回错误-待处理
-                JObject data = JObject.Parse(para.BusinessData);
+                JObject businessData = JObject.Parse(para.BusinessData);
                 JObject config = JObject.Parse(para.ConfigData);
                 JObject runtimePara = JObject.Parse(para.RuntimeData);
                 JToken functionName = config.GetValue("functionName");
-                JToken firstPara = config.GetValue("parameter");
-                var approvers = typeof(RemoteAPIFunctionCallHelper).GetMethod(functionName.Value<string>()).Invoke(null, new[] { firstPara.ToString(), "" });
+                JToken functionPara = config.GetValue("parameter");
+                var realFunctionPara = functionPara.DeepClone();
+                Utility.ProcessJTokent(functionPara, businessData, ref realFunctionPara);
+                var approvers = typeof(RemoteAPIFunctionCallHelper).GetMethod(functionName.Value<string>()).Invoke(null, new[] { realFunctionPara.ToString(), "" });
                 if (approvers != null)
                 {
                     if (((List<String>)approvers).Count == 0)

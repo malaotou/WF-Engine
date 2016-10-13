@@ -114,5 +114,11 @@ namespace BOC.GSP.V2.WF.WebApi.Controllers
             var processes = ProcessRepository.GetProcesses();
             return Request.CreateResponse(HttpStatusCode.OK, processes);
         }
+        [Route("ListAllInstance")]
+        [HttpGet]
+        public HttpResponseMessage ListProcessInstance()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, ProcessRepository.GetAllProcessInstance());
+        }
     }
 }

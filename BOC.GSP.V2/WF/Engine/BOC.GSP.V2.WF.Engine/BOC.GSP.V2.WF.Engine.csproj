@@ -76,6 +76,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Service References\FunctionCallService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Singleton.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,11 +89,19 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BOC.GSP.V2.WF.Common.FunctionCallService.CompositeType.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Service References\FunctionCallService\FunctionCallService.wsdl" />
+    <None Include="Service References\FunctionCallService\FunctionCallService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FunctionCallService\FunctionCallService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\BOC.GSP.V2.WF.Common\BOC.GSP.V2.WF.Common.csproj">
@@ -105,6 +118,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </XamlAppDef>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\FunctionCallService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FunctionCallService\FunctionCallService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FunctionCallService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FunctionCallService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FunctionCallService\FunctionCallService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FunctionCallService\FunctionCallService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FunctionCallService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

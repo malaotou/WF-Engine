@@ -17,6 +17,7 @@ E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2_V2\BOCGSP2Project\BOC.GSP.V2\WF
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2_V2\BOCGSP2Project\BOC.GSP.V2\WF\Common\BOC.GSP.V2.WF.Common\obj\Debug\BOC.GSP.V2.WF.Common.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2_V2\BOCGSP2Project\BOC.GSP.V2\WF\Common\BOC.GSP.V2.WF.Common\obj\Debug\BOC.GSP.V2.WF.Common.pdb
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2_V2\BOCGSP2Project\BOC.GSP.V2\WF\Common\BOC.GSP.V2.WF.Common\obj\Debug\BOC.GSP.V2.WF.Common.csprojResolveAssemblyReference.cache
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Common\BOC.GSP.V2.WF.Common\bin\Debug\BOC.GSP.V2.WF.Common.dll.config
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Common\BOC.GSP.V2.WF.Common\bin\Debug\BOC.GSP.V2.WF.Common.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Common\BOC.GSP.V2.WF.Common\bin\Debug\BOC.GSP.V2.WF.Common.pdb
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Common\BOC.GSP.V2.WF.Common\bin\Debug\Dapper.dll
@@ -30,3 +31,4 @@ E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Common\BOC.GSP.V2.WF.Common\bin\Debug\System.Net.Http.Formatting.xml
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Common\BOC.GSP.V2.WF.Common\obj\Debug\BOC.GSP.V2.WF.Common.dll
 E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Common\BOC.GSP.V2.WF.Common\obj\Debug\BOC.GSP.V2.WF.Common.pdb
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Common\BOC.GSP.V2.WF.Common\obj\Debug\BOC.GSP.V2.WF.Common.csprojResolveAssemblyReference.cache

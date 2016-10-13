@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="BOC.GSP.V2.WF.WCFService.FunctionCallService" CodeBehind="FunctionCallService.svc.cs" %>
