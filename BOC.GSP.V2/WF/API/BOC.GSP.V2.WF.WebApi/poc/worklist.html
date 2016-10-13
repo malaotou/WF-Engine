@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../Scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../Scripts/app/app2.js"></script>
+</head>
+<body ng-app="app">
+
+    <div ng-controller="worklist">
+        <input type="button" ng-click="getWorkList()" value="获取所有待办任务" />
+        <div ng-repeat="item in data.data">
+            <label>{{item.UserID}}</label>
+            <label>{{item.Folio }}</label>
+            <label>{{item.Title }}</label>
+            
+            <label>{{item.ID }}</label>
+            <label>{{item.RuntimeInstanceID }}</label>
+            <input type="text" ng-model="$parent.Remark" />
+            <input type="button" value="审批通过" ng-click="approve(item)"/>
+            <input type="button" value="审批不通过" ng-click="deny(item)" />
+        </div>
+
+    </div>
+</body>
+</html>

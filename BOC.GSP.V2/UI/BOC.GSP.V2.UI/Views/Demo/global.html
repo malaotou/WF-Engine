@@ -1,0 +1,841 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全局样式</title>
+
+    <link href="../../Content/global.css" rel="stylesheet" />
+    <link href="../../Content/layout-left.css" rel="stylesheet" />
+
+    <link href="../../Javascript/fullcalendar/fullcalendar.min.css" rel="stylesheet" />
+
+    <script src="../../Javascript/jquery-2.2.4.min.js"></script>
+    <script src="../../Javascript/global.js"></script>
+    <script src="../../Javascript/fullcalendar/lib/moment.min.js"></script>
+    <script src="../../Javascript/fullcalendar/fullcalendar.min.js"></script>
+    <script src="../../Javascript/fullcalendar/lang-all.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev',
+                    center: 'title',
+                    right: 'next'
+                },
+                defaultDate: new Date(),
+                lang: 'zh-cn',
+                selectable: true,
+                selectHelper: true,
+                color: "red",
+                titleFormat: {
+                    month: 'YYYY' + '年' + 'MM' + '月'
+                },
+
+                dayClick: function (start, end) {
+                    alert(start.format('YYYY-MM-DD'));
+                },
+                eventLimit: true, // allow "more" link when too many events
+                events: [
+                    {
+                        title: '',
+                        start: '2016-08-10'
+                    },
+                    {
+                        title: '',
+                        start: '2016-08-12'
+                    },
+                    {
+                        title: '',
+                        start: '2016-08-17'
+                    },
+                ]
+            });
+        });
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <!-- 常用文本框 -->
+    <div class="input">
+        <div><b>文本框</b></div>
+        <input type="text" class="input-text200" value="宽度200px" /><br />
+        <input type="text" class="input-text260" value="宽度260px" /><br />
+        <input type="text" class="input-text280" value="宽度280px" /><br />
+        <input type="text" class="input-text500" value="宽度500px" /><br />
+        <input type="text" class="input-text650" value="宽度650px" />
+    </div>
+    <br />
+    <!-- 常用下拉框 -->
+    <div class="select">
+        <div><b>下拉框</b></div>
+        <select class="select200">
+            <option>宽度200px</option>
+        </select>
+        <br />
+        <select class="select260">
+            <option>宽度260px</option>
+        </select>
+        <br />
+        <select class="select280">
+            <option>宽度280px</option>
+        </select>
+        <br />
+        <select class="select500">
+            <option>宽度500px</option>
+        </select>
+        <br />
+        <select class="select650">
+            <option>宽度650px</option>
+        </select>
+    </div>
+
+    <br />
+    <!-- 常用按钮 -->
+    <div class="button">
+        <div><b>按钮</b></div>
+        <button class="btn-normal">常用</button>
+        <button class="btn-upload55">上传55</button>
+        <button class="btn-upload75">上传75</button>
+        <button class="btn-search60">查找60</button>
+    </div>
+    <br />
+
+    <!-- table -->
+    <div class="table">
+        <div><b>表格+分页</b></div>
+        <!-- 如果不需要边框 去掉 table-border -->
+        <table class="table-basic table-border ">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" name="chk" id="selectall" /> </th>
+                    <th class="sorting">Name</th>
+                    <th>Position</th>
+                    <th class="min-tablet">Office</th>
+                    <th class="min-tablet">Extn.</th>
+                    <th class="min-desktop">Start date</th>
+                    <th class="min-desktop">Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="chk"><input type="checkbox" name="chk" /></td>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                </tr>
+                <tr>
+                    <td class="chk"><input type="checkbox" name="chk" /></td>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>2011/07/25</td>
+                    <td>$170,750</td>
+                </tr>
+                <tr>
+                    <td class="chk"><input type="checkbox" name="chk" /></td>
+                    <td>Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>San Francisco</td>
+                    <td>66</td>
+                    <td>2009/01/12</td>
+                    <td>$86,000</td>
+                </tr>
+                <tr>
+                    <td class="chk"><input type="checkbox" name="chk" /></td>
+                    <td>Cedric Kelly</td>
+                    <td>Senior Javascript Developer</td>
+                    <td>Edinburgh</td>
+                    <td>22</td>
+                    <td>2012/03/29</td>
+                    <td>$433,060</td>
+                </tr>
+                <tr>
+                    <td class="chk"><input type="checkbox" name="chk" /></td>
+                    <td>Airi Satou</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>33</td>
+                    <td>2008/11/28</td>
+                    <td>$162,700</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <!-- 分页 -->
+    <div class="paging">
+        <div class="col-sm-6 page-index">
+            <div class="dataTables_info">
+                1-15 条（共22条） 已选择 1 条
+            </div>
+        </div>
+        <div class="col-sm-6 page-size">
+            <div class="paging_simple_numbers">
+                <ul class="pagination">
+                    <li><a href="#">|<</a></li>
+                    <li><a href="#"><</a></li>
+                    <li><a href="#">第1页</a></li>
+                    <li><a href="#">></a></li>
+                    <li><a href="#">>|</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <!-- icon -->
+    <div class="icon">
+        <div><b>ICON图标</b></div>
+        <i class="icon-psi-arrow-left"></i>
+        <i class="icon-psi-arrow-right"></i>
+        <i class="icon-pli-magnifi-glass"></i>
+        <i class="icon-pli-add"></i>
+        <i class="icon-pli-plus"></i>
+        <i class="icon-pli-minus"></i>
+        <button class="btn-normal"><i class="icon-pli-plus"></i>添加</button>
+        <button class="btn-normal"><i class="icon-pli-add"></i>删除</button>
+        <button class="btn-normal">分类打标</button>
+        <button class="btn-normal"><i class="icon-pli-add"></i>导出Excel</button>
+    </div>
+    <br />
+    <!-- 日期控件 -->
+    <div class="date">
+        <div><b>日期控件</b></div>
+        <div id="calendar" style="width:300px;"> </div>
+        <br />
+        <!--<div class="date-control">-->
+        <input type="text" class="start-date current-date" />
+        <input type="text" class="end-date current-date" />
+        <div class="calendar-date"> </div>
+        <!--</div>-->
+
+    </div>
+    <br />
+    <!-- 面包屑导航 -->
+    <div class="icon">
+        <div><b>面包屑导航</b></div>
+        <div>
+            <ul class="breadcrumb">
+                <li><a href="#">Home&gt;</a></li>
+                <li><a href="#">2016&gt;</a></li>
+                <li class="active">八月</li>
+            </ul>
+        </div>
+    </div>
+
+    <br />
+
+    <!-- panels 面板 靠右  -->
+    <div class="panels-right">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-control">
+                    <!--tabs 页签-->
+                    <ul class="nav-tabs">
+                        <li class="active"><a href="javascript:;">First Tab</a></li>
+                        <li><a href="javascript:;">Second Tab</a></li>
+                    </ul>
+                </div>
+                <span class="panel-title">tabs 页签</span>
+            </div>
+
+            <!-- 主体 -->
+            <div class="panel-body">
+                <div class="tab-content">
+                    <div id="demo-tabs-box-1" class="tab-pane active">
+                        <p class="text-main text-lg mar-no">First Tab Content</p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    </div>
+                    <div id="demo-tabs-box-2" class="tab-pane">
+                        <p class="text-main text-lg mar-no">Second Tab Content</p>
+                        Duis autem vel eum iriure dolor in hendrerit in vulputate.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <!-- panels 面板 靠左  -->
+    <div class="panels-left">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-control-left">
+                    <!--tabs 页签-->
+                    <ul class="nav-tabs">
+                        <li class="active"><a href="javascript:;">First Tab</a></li>
+                        <li><a href="javascript:;">Second Tab</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 主体 -->
+            <div class="panel-body-left">
+                <div class="tab-content">
+                    <div id="demo-tabs-box-3" class="tab-pane active">
+                        <p class="text-main text-lg mar-no">First Tab Content</p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    </div>
+                    <div id="demo-tabs-box-4" class="tab-pane">
+                        <p class="text-main text-lg mar-no">Second Tab Content</p>
+                        Duis autem vel eum iriure dolor in hendrerit in vulputate.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- panels from 面板 -->
+    <div class="panel-from">
+        <div class="panel-heading">
+            <h3 class="panel-title">基本表单</h3>
+        </div>
+
+        <form class="form-horizontal">
+            <!-- 静态内容展示 单列 偏左 -->
+            <div class="form-group">
+                <label class="form-group-title">静态内容展示 单列 偏左</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-9"><p class="form-control-static">球台项目</p></div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目报价</label>
+                <div class="col-md-9"><p class="form-control-static">5000</p></div>
+            </div>
+
+            <!-- 静态内容展示 单列 居中 -->
+            <div class="form-group">
+                <label class="form-group-title">静态内容展示 单列 居中</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-5 control-label">项目名称</label>
+                <div class="col-md-6"><p class="form-control-static">球台项目</p></div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-5 control-label">项目报价</label>
+                <div class="col-md-6"><p class="form-control-static">5000</p></div>
+            </div>
+
+            <!-- 文本内容展示 单列 偏左 -->
+            <div class="form-group">
+                <label class="form-group-title">文本内容展示 单列 偏左</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-9"><input type="text" class="form-control-input" value="GSP" /></div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目报价</label>
+                <div class="col-md-9"><input type="text" class="form-control-input" value="5000" /></div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-9">
+                    <textarea class="form-control-textarea"></textarea>
+                </div>
+            </div>
+
+            <!-- 文本内容展示 单列 居中 -->
+            <div class="form-group">
+                <label class="form-group-title">文本内容展示 单列 居中</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-5 control-label">项目名称</label>
+                <div class="col-md-6"><input type="text" class="form-control-input" value="GSP" /></div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-5 control-label">项目报价</label>
+                <div class="col-md-6"><input type="text" class="form-control-input" value="5000" /></div>
+            </div>
+
+            <!-- 下拉内容展示 单列 偏左 -->
+            <div class="form-group">
+                <label class="form-group-title">下拉内容展示 单列 偏左</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-9">
+                    <select class="form-control-select">
+                        <option>--请选择--</option>
+                        <option>GSP</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目报价</label>
+                <div class="col-md-9">
+                    <select class="form-control-select">
+                        <option>--请选择--</option>
+                        <option>5000</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 下拉内容展示 单列 居中 -->
+            <div class="form-group">
+                <label class="form-group-title">下拉内容展示 单列 居中</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-5 control-label">项目名称</label>
+                <div class="col-md-6">
+                    <select class="form-control-select">
+                        <option>--请选择--</option>
+                        <option>GSP</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-5 control-label">项目报价</label>
+                <div class="col-md-6">
+                    <select class="form-control-select">
+                        <option>--请选择--</option>
+                        <option>5000</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 单选框展示 单列 偏左 垂直-->
+            <div class="form-group">
+                <label class="form-group-title">单选框展示 单列 偏左 垂直</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-9">
+                    <div class="radio">
+                        <input class="magic-radio" type="radio" name="form-radio-button">
+                        <label class="form-radio-button">Option 1 (pre-checked)</label>
+                    </div>
+                    <div class="radio">
+                        <input class="magic-radio" type="radio" name="form-radio-button" checked>
+                        <label class="form-radio-button">Option 2 (pre-checked)</label>
+                    </div>
+                    <div class="radio">
+                        <input class="magic-radio" type="radio" name="form-radio-button">
+                        <label class="form-radio-button">Option 3 (pre-checked)</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 单选框展示 单列 居中 水平 -->
+            <div class="form-group">
+                <label class="form-group-title">单选框展示 单列 居中 水平</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-5 control-label">项目名称</label>
+                <div class="col-md-6">
+                    <div class="radio">
+                        <input class="magic-radio" type="radio" name="form-radio-button-center">
+                        <label class="form-radio-button-center">Option 1 (pre-checked)</label>
+
+                        <input class="magic-radio" type="radio" name="form-radio-button-center" checked>
+                        <label class="form-radio-button-center">Option 2 (pre-checked)</label>
+
+                        <input class="magic-radio" type="radio" name="form-radio-button-center">
+                        <label class="form-radio-button-center">Option 3 (pre-checked)</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 复选框展示 单列 偏左 垂直-->
+            <div class="form-group">
+                <label class="form-group-title">复选框展示 单列 偏左 垂直</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-9">
+                    <div class="checkbox">
+                        <input class="magic-checkbox" type="checkbox" name="form-checkbox-button" checked>
+                        <label class="form-checkbox-button">Option 1 (pre-checked)</label>
+                    </div>
+                    <div class="checkbox">
+                        <input class="magic-checkbox" type="checkbox" name="form-checkbox-button">
+                        <label class="form-checkbox-button">Option 2 (pre-checked)</label>
+                    </div>
+                    <div class="checkbox">
+                        <input class="magic-checkbox" type="checkbox" name="form-checkbox-button">
+                        <label class="form-checkbox-button">Option 3 (pre-checked)</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 单选框展示 单列 居中 水平 -->
+            <div class="form-group">
+                <label class="form-group-title">单选框展示 单列 居中 水平</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-5 control-label">项目名称</label>
+                <div class="col-md-6">
+                    <div class="checkbox">
+                        <input class="magic-checkbox" type="checkbox">
+                        <label class="form-checkbox-button-center">Option 1 (pre-checked)</label>
+                        <input class="magic-checkbox" type="checkbox">
+                        <label class="form-checkbox-button-center">Option 2 (pre-checked)</label>
+                        <input class="magic-checkbox" type="checkbox" checked>
+                        <label class="form-checkbox-button-center">Option 3 (pre-checked)</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 静态内容 双列 -->
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-8"><p class="form-control-static">球台项目</p></div>
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-8"><p class="form-control-static">球台项目</p></div>
+            </div>
+
+            <!-- 文本框 双列 -->
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-8"><input type="text" class="form-control-input" value="GSP" /></div>
+                <label class="col-md-3 control-label">项目报价</label>
+                <div class="col-md-8"><input type="text" class="form-control-input" value="5000W" /></div>
+            </div>
+
+            <!-- 下拉框 双列 -->
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-8">
+                    <select class="form-control-select">
+                        <option>--请选择--</option>
+                        <option>GSP</option>
+                    </select>
+                </div>
+                <label class="col-md-3 control-label">项目报价</label>
+                <div class="col-md-8">
+                    <select class="form-control-select">
+                        <option>--请选择--</option>
+                        <option>5000</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <!-- 文本框 单列 按钮 等宽 -->
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-9">
+                    <span class="input-group-btn">
+                        <input type="text" class="form-control-upload" value="GSP" />
+                        <span class="fileUpload">
+                            <span class="btn-upload">Upload</span>
+                            <input type="file" class="upload" />
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- 文本框 双列 按钮  等宽-->
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-8">
+                    <span class="input-group-btn">
+                        <input type="text" class="form-control-upload" value="GSP" />
+                        <span class="fileUpload">
+                            <span class="btn-upload">Upload</span>
+                            <input type="file" class="upload" />
+                        </span>
+                    </span>
+                </div>
+                <label class="col-md-3 control-label">项目报价</label>
+                <div class="col-md-8">
+                    <span class="input-group-btn">
+                        <input type="text" class="form-control-upload" value="GSP" />
+                        <span class="fileUpload">
+                            <span class="btn-upload">Upload</span>
+                            <input type="file" class="upload" />
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- 文本框 单列 按钮 宽度之外 -->
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-9">
+                    <span class="input-group-btn-out">
+                        <input type="text" class="form-control-upload-out" value="GSP" />
+                        <span class="fileUpload-out">
+                            <span class="btn-upload">Upload</span>
+                            <input type="file" class="upload" />
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- 文本框 双列 按钮  宽度之外-->
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目名称</label>
+                <div class="col-md-8">
+                    <span class="input-group-btn-out">
+                        <input type="text" class="form-control-upload-out" value="GSP" />
+                        <span class="fileUpload-out">
+                            <span class="btn-upload">Upload</span>
+                            <input type="file" class="upload" />
+                        </span>
+                    </span>
+                </div>
+                <label class="col-md-3 control-label">项目报价</label>
+                <div class="col-md-8">
+                    <span class="input-group-btn-out">
+                        <input type="text" class="form-control-upload-out" value="GSP" />
+                        <span class="fileUpload-out">
+                            <span class="btn-upload">Upload</span>
+                            <input type="file" class="upload" />
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- 按钮 单列 居中 -->
+            <div class="form-group">
+                <div class="form-button-submit">
+                    <button class="btn-normal">提交</button>
+                </div>
+            </div>
+
+            <!-- 按钮 单列 居中 -->
+            <div class="form-group">
+                <div class="form-button-submit">
+                    <button class="btn-normal">提交</button>
+                    <button class="btn-normal">取消</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+    <!-- 2016-08-23 tabs 具有子属关系 -->
+    <br />
+    <br />
+    <div class="panels-right">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-control">
+                    <!--tabs 页签-->
+                    <ul class="nav-tabs">
+                        <li class="active"><a href="javascript:;">First Tab</a></li>
+                        <li><a href="javascript:;">Second Tab</a></li>
+                        <li><a href="javascript:;">33333 Tab</a></li>
+                    </ul>
+                </div>
+                <span class="panel-title">tabs 页签</span>
+            </div>
+
+            <!-- 主体 -->
+            <div class="panel-body">
+                <div class="tab-content">
+                    <div id="demo-tabs-box-5" class="tab-pane active">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="panel-control-child">
+                                    <!--tabs 页签-->
+                                    <ul class="nav-tabs">
+                                        <li class="active"><a href="javascript:;">1111</a></li>
+                                        <li><a href="javascript:;">2222 Tab_1</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 主体 -->
+                            <div class="panel-body-child">
+                                <div class="tab-content">
+                                    <div id="demo-tabs-box-3" class="tab-pane active">
+                                        <p class="text-main text-lg mar-no">First Tab Content1</p>
+                                        <div>111</div>
+                                    </div>
+                                    <div id="demo-tabs-box-4" class="tab-pane">
+                                        <p class="text-main text-lg mar-no">Second Tab Content1</p>
+                                        Duis autem vel eum iriure dolor in hendrerit in vulputate.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="demo-tabs-box-6" class="tab-pane">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="panel-control-child">
+                                    <!--tabs 页签-->
+                                    <ul class="nav-tabs">
+                                        <li class="active"><a href="javascript:;">3333 Tab2</a></li>
+                                        <li><a href="javascript:;">4444 Tab2</a></li>
+                                        <li><a href="javascript:;">123123 Tab2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 主体 -->
+                            <div class="panel-body-child">
+                                <div class="tab-content">
+                                    <div id="demo-tabs-box-3" class="tab-pane active">
+                                        <p class="text-main text-lg mar-no">First Tab Content2</p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    </div>
+                                    <div id="demo-tabs-box-4" class="tab-pane">
+                                        <p class="text-main text-lg mar-no">Second Tab Content2</p>
+                                        Duis autem vel eum iriure dolor in hendrerit in vulputate.
+                                    </div>
+                                    <div id="demo-tabs-box-4" class="tab-pane">
+                                        1234123124124124
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="demo-tabs-box-6" class="tab-pane">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="panel-control-child">
+                                    <!--tabs 页签-->
+                                    <ul class="nav-tabs">
+                                        <li class="active"><a href="javascript:;">5555 Tab2</a></li>
+                                        <li><a href="javascript:;">6666 Tab2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 主体 -->
+                            <div class="panel-body-child">
+                                <div class="tab-content">
+                                    <div id="demo-tabs-box-3" class="tab-pane active">
+                                        <p class="text-main text-lg mar-no">First Tab Content2</p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    </div>
+                                    <div id="demo-tabs-box-4" class="tab-pane">
+                                        <p class="text-main text-lg mar-no">Second Tab Content2</p>
+                                        Duis autem vel eum iriure dolor in hendrerit in vulputate.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br />
+
+
+    <!-- 下拉带复选框选项 -->
+    <!-- 右 -->
+    <div class="select-checkbox">
+        <!-- ================== copy start ============================= -->
+        <!-- 数据维度按钮位置  左边：select-left， 右边：select-left-->
+        <div class="select-left">
+            <div class="btn-select">
+                <button class="btn-normal">数据维度</button>
+            </div>
+
+            <div class="items-checkbox">
+                <ul class="items-data">
+                    <li>
+                        <input class="magic-checkbox" type="checkbox" name="form-checkbox-button" checked>
+                        <label class="form-checkbox-button">Option 1 (pre-checked)</label>
+                    </li>
+                    <li>
+                        <input class="magic-checkbox" type="checkbox" name="form-checkbox-button">
+                        <label class="form-checkbox-button">Option 2 (pre-checked)</label>
+                    </li>
+                    <li>
+                        <input class="magic-checkbox" type="checkbox" name="form-checkbox-button">
+                        <label class="form-checkbox-button">Option 2 (pre-checked)</label>
+                    </li>
+                    <li>
+                        <input class="magic-checkbox" type="checkbox" name="form-checkbox-button">
+                        <label class="form-checkbox-button">Option 2 (pre-checked)</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- ================== copy end ============================= -->
+        <table class="table-basic table-border ">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" name="chk" id="selectall" /> </th>
+                    <th class="sorting">Name</th>
+                    <th>Position</th>
+                    <th class="min-tablet">Office</th>
+                    <th class="min-tablet">Extn.</th>
+                    <th class="min-desktop">Start date</th>
+                    <th class="min-desktop">Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="chk"><input type="checkbox" name="chk" /></td>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                </tr>
+                <tr>
+                    <td class="chk"><input type="checkbox" name="chk" /></td>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>2011/07/25</td>
+                    <td>$170,750</td>
+                </tr>
+                <tr>
+                    <td class="chk"><input type="checkbox" name="chk" /></td>
+                    <td>Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>San Francisco</td>
+                    <td>66</td>
+                    <td>2009/01/12</td>
+                    <td>$86,000</td>
+                </tr>
+                <tr>
+                    <td class="chk"><input type="checkbox" name="chk" /></td>
+                    <td>Cedric Kelly</td>
+                    <td>Senior Javascript Developer</td>
+                    <td>Edinburgh</td>
+                    <td>22</td>
+                    <td>2012/03/29</td>
+                    <td>$433,060</td>
+                </tr>
+                <tr>
+                    <td class="chk"><input type="checkbox" name="chk" /></td>
+                    <td>Airi Satou</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>33</td>
+                    <td>2008/11/28</td>
+                    <td>$162,700</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+
+
+
+</body>
+</html>

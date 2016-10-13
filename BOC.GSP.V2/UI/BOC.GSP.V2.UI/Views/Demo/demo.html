@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的工作库</title>
+    <link href="../../Content/global.css" rel="stylesheet" />
+
+    <style>
+        a.underline {
+            text-decoration: Underline;
+        }
+
+
+        .pro-from {
+            padding: 0;
+            border:none !important;
+        }
+
+        .pro-tabs {
+            left: 15px;
+            margin-bottom: 5px;
+        }
+
+
+            .pro-tabs li a {
+                display: block;
+                float: left;
+                color: #ff0000;
+                border: 1px #ffd800 solid;
+                width: 80px;
+                height: 45px;
+                text-align: center;
+                line-height: 45px;
+                margin: 5px 10px 0 0;
+                text-align: center;
+            }
+
+                .pro-tabs li a:hover {
+                    background-color: #f5bed6;
+                }
+
+        .pro-search {
+            float: right !important;
+            padding-right: 20px;
+            line-height: 50px;
+        }
+
+
+        .pro-btn {
+        }
+
+            .pro-btn button {
+                margin-top: 10px;
+                margin-left: 15px;
+                margin-bottom: 10px;
+                margin-right: 0px;
+            }
+
+        .split-solid-line {
+            padding-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="panel-from">
+        <div class="panel-heading">
+            <h3 class="panel-title">我的项目库</h3>
+        </div>
+
+        <form class="form-horizontal pro-from" action="/">
+            <div class="form-group">
+                <div class=" col-md-5 pro-tabs">
+                    <ul>
+                        <li class="active">
+                            <a href="javascript:;">
+                                全部
+                            </a>
+                        </li>
+                        <li><a href="javascript:;">待更新</a></li>
+                        <li><a href="javascript:;">待打标</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="pro-search">
+                        <input type="text" class="input-text200 search" value="查找" />
+                        <button class="btn-search60">查找</button>&nbsp;
+                        <a href="#" class="underline">高级查询</a>
+                    </div>
+                </div>
+            </div>
+            <div class="split-dashed-line"></div>
+            <div class="form-group pro-btn">
+                <button class="btn-normal"><i class="icon-pli-plus"></i>添加</button>
+                <button class="btn-normal"><i class="icon-pli-add"></i>删除</button>
+                <button class="btn-normal">分类打标</button>
+                <button class="btn-normal"><i class="icon-pli-add"></i>导出Excel</button>
+            </div>
+        </form>
+
+
+        <div class="pro-table">
+            <!-- table -->
+            <!-- 如果不需要边框 去掉 table-border -->
+            <table class="table-basic">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" name="chk" id="selectall" /> </th>
+                        <th class="sorting">Name</th>
+                        <th>Position</th>
+                        <th class="min-tablet">Office</th>
+                        <th class="min-tablet">Extn.</th>
+                        <th class="min-desktop">Start date</th>
+                        <th class="min-desktop">Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="chk"><input type="checkbox" name="chk" /></td>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>61</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td class="chk"><input type="checkbox" name="chk" /></td>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>63</td>
+                        <td>2011/07/25</td>
+                        <td>$170,750</td>
+                    </tr>
+                    <tr>
+                        <td class="chk"><input type="checkbox" name="chk" /></td>
+                        <td>Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>San Francisco</td>
+                        <td>66</td>
+                        <td>2009/01/12</td>
+                        <td>$86,000</td>
+                    </tr>
+                    <tr>
+                        <td class="chk"><input type="checkbox" name="chk" /></td>
+                        <td>Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>Edinburgh</td>
+                        <td>22</td>
+                        <td>2012/03/29</td>
+                        <td>$433,060</td>
+                    </tr>
+                    <tr>
+                        <td class="chk"><input type="checkbox" name="chk" /></td>
+                        <td>Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>33</td>
+                        <td>2008/11/28</td>
+                        <td>$162,700</td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <div class="split-solid-line"></div>
+            <!-- 分页 -->
+            <div class="paging">
+                <div class="col-sm-6 page-index">
+                    <div class="dataTables_info">
+                        1-15 条（共22条） 已选择 1 条
+                    </div>
+                </div>
+                <div class="col-sm-6 page-size">
+                    <div class="paging_simple_numbers">
+                        <ul class="pagination">
+                            <li><a href="#">|<</a></li>
+                            <li><a href="#"><</a></li>
+                            <li><a href="#">第1页</a></li>
+                            <li><a href="#">></a></li>
+                            <li><a href="#">>|</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Engine\Engine\obj\Debug\Engine.csprojResolveAssemblyReference.cache
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Engine\Engine\obj\Debug\Engine_MarkupCompile.cache

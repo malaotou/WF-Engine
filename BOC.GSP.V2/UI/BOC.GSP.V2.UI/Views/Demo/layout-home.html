@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公共首页</title>
+    <link href="../../Content/global.css" rel="stylesheet" />
+    <link href="../../Content/layout.css" rel="stylesheet" />
+    <link href="../../Javascript/fullcalendar/fullcalendar.min.css" rel="stylesheet" />
+
+    <script src="../../Javascript/jquery-2.2.4.min.js"></script>
+    <script src="../../Javascript/global.js"></script>
+
+    <!--<script src="../../Javascript/fullcalendar/fullcalendar.min.js"></script>
+    <script src="../../Javascript/fullcalendar/lib/moment.min.js"></script>
+    <script src="../../Javascript/fullcalendar/lang-all.js"></script>-->
+
+    <script src="../../Javascript/fullcalendar/lib/moment.min.js"></script>
+    <script src="../../Javascript/fullcalendar/fullcalendar.min.js"></script>
+    <script src="../../Javascript/fullcalendar/lang-all.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev',
+                    center: 'title',
+                    right: 'next'
+                },
+                defaultDate: new Date(),
+                lang: 'zh-cn',
+                selectable: true,
+                selectHelper: true,
+                color: "red",
+                titleFormat: {
+                    month: 'YYYY' + '年' + 'MM' + '月'
+                },
+
+                dayClick: function (start, end) {
+                    alert(start.format('YYYY-MM-DD'));
+                },
+                eventLimit: true, // allow "more" link when too many events
+                events: [
+                    {
+                        title: '',
+                        start: '2016-08-10'
+                    },
+                    {
+                        title: '',
+                        start: '2016-08-12'
+                    },
+                    {
+                        title: '',
+                        start: '2016-08-17'
+                    },
+                ]
+            });
+        });
+
+    </script>
+
+    <style>
+        .container,
+        .header {
+            padding-right: 70px;
+        }
+
+        .content-container {
+            padding: 85px 15px 30px 15px;
+        }
+
+        .page-content {
+            width: 100%;
+        }
+
+        .page-right {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            background-color: #f3f3f3;
+            width: 70px;
+            min-height: 100%;
+            z-index: 11;
+        }
+
+        .page-right-link {
+            background-color: #ffffff;
+            position: absolute;
+            width: 60px;
+            height: 100%;
+            right: 0px;
+            top: 0;
+            z-index: 12;
+        }
+
+            .page-right-link ul {
+                padding-top: 200px;
+            }
+
+                .page-right-link ul li a {
+                    position: relative;
+                    display: inline-block;
+                    float: left;
+                    width: 100%;
+                    padding: 30.5px 0px;
+                    margin-bottom: 20px;
+                    background-color: #ff6a00;
+                    text-align: center;
+                }
+
+        .rc,
+        .costume,
+        .zx {
+            padding-top: 5px;
+            padding-left: 5px;
+            position: relative;
+            background-color: #ffffff;
+            border: 1px #808080 solid;
+        }
+
+        .rc {
+            height: 280px;
+        }
+
+        .costume {
+            height: 300px;
+            margin: 10px 0;
+        }
+
+        .zx {
+            height: 260px;
+        }
+
+        #calendar,
+        .rc-xc,
+        .rc-out-link {
+            position: relative;
+            float: left;
+        }
+
+        .rc-xc {
+            padding: 0 40px;
+        }
+
+        .rc-out-link {
+            float: right;
+            padding-right: 15px;
+        }
+
+        .xc-title {
+            position: relative;
+            padding: 10px 10px;
+            border-bottom: 1px #808080 dashed;
+        }
+
+            .xc-title .today {
+                font-size: 24px;
+            }
+
+             .xc-title .history {
+                position:relative;
+                float:right;
+                top:10px;
+            }
+
+        .xc-history {
+            position: relative;
+            top: 0;
+            right: 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <div class="header-content">
+                <div class="logo-img"></div>
+                <div class="top-links">
+                    <ul>
+                        <li class="wait-read">
+                            <a href="#">
+                                <span class="icon-remind icon-move">5</span>
+                                <span>待阅</span>
+                            </a>
+                        </li>
+                        <li class="wait-work">
+                            <a href="#">
+                                <span class="icon-remind icon-move">10</span>
+                                <span>待办</span>
+                            </a>
+                        </li>
+                        <li class="wait-warring">
+                            <a href="#">
+                                <span class="icon-remind icon-move"></span>
+                                <span>预警</span>
+                            </a>
+                        </li>
+                        <li class="wait-notic">
+                            <a href="#">
+                                <span class="icon-remind icon-move">1</span>
+                                <span>公告</span>
+                            </a>
+                        </li>
+                        <li class="user-img">
+                            <a href="#">
+                                <span class="icon-status"></span>
+                            </a>
+                        </li>
+                        <li class="user-info">
+                            <a href="#">
+                                <p>张三</p>
+                                <p>北京市分行  |  公司金融部XX团队</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="top-bank"></div>
+        </div>
+
+        <!-- 内容 -->
+        <div class="boxed">
+            <div class="content-container">
+                <div class="page-content">
+                    <!-- 日程 260 -->
+                    <div class="rc">
+                        <div id="calendar" class="col-md-4"> </div>
+                        <div class="col-md-5 rc-xc">
+                            <div class="xc-title">
+                                <span class="today">今日待办</span>
+                                <a href="#" class="history">查看历史待办</a>
+                            </div>
+                            <div class="xc-content">
+                                <ul>
+                                    <li>
+                                        <div class="schedule-event"><a href="#">XXX企业在球台中已为其他集团的成员企业，需确认后在BANCS中修改</a></div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="schedule-event"><a href="#">拜访xx公司高层</a></div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="schedule-event"><a href="#">XXX企业在球台中已为其他集团的成员企业，需确认后在BANCS中修改</a></div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="schedule-event"><a href="#">XXX企业在球台中已为其他集团的成员企业，需确认后在BANCS中修改</a></div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="schedule-event"><a href="#">拜访xx公司高层</a></div>
+                                        <div class="clear"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-16 rc-out-link">456456 </div>
+                    </div>
+
+                    <!-- 客户 300-->
+                    <div class="costume">
+
+                    </div>
+
+                    <!-- 资讯 260 -->
+                    <div class="zx"></div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="bottom-bank"></div>
+            <div class="footer-content">&copy;版权归中国银行所有</div>
+        </div>
+
+        <!-- 右侧 -->
+        <div class="page-right">
+            <div class="page-right-link">
+                <ul>
+                    <li><a href="#"><i>1212</i><p>简洁版</p></a></li>
+                    <li><a href="#">首页定制</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

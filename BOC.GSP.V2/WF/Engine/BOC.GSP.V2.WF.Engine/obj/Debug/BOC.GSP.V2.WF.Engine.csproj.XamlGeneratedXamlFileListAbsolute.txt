@@ -1,0 +1,2 @@
+obj\Debug\WFInstance.g.xaml
+obj\Debug\BOC.GSP.V2.WF.Engine_WFInstance_BeforeInitializeComponentHelper.txt

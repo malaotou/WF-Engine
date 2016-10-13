@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../Scripts/angular.min.js"></script>
+    <script type="text/javascript" src="../Scripts/app/app.js"></script>
+</head>
+<body ng-app="app">
+    <div ng-controller="process">
+        <a href="worklist.html" target="_blank">查看系统代办信息页面</a>
+        <form name="startProcess" ng-submit="submitForm()">
+
+            <input type="button" ng-click="getProcess()" value="获取流程定义" />
+            <br>
+            <br />
+
+            <div ng-model="data">
+
+                <div ng-repeat="item in data.data">
+                    <!--<li>{{item.ProcessName}} <input type="button" ng-click="startProcess(item.ProcessID)" value="启动此工作流" /></li>-->
+                    <input type="radio" name="gender" ng-model="$parent.id" value="{{item.ProcessID}}" ng-checked="checked()" /> {{item.ProcessName}}
+                    <br>
+                </div>
+
+            </div>
+            <div ng-show="data" style="margin-top:20px;">
+                <label> 流程启动信息信息区域：</label>
+                <div>
+                    <label>代办标题:</label> <input type="text" ng-model="title" />
+                </div>
+                <div>
+                    <label>流程ID:</label> <label>{{id}}</label>
+                </div>
+                <div>
+                    <label>发起人:</label>
+                    <input type="text" ng-model="user" />
+                </div>
+
+
+                <div style="margin-top:20px;">
+                    <span>表单数据信息区域</span>
+                    <br />
+                    <label for="name">OrgName:</label>
+                    <input id="name" type="text" ng-model="orgName" />
+                    <br />
+                    <label for="name">OrgCode:</label>
+                    <input id="name" type="text" ng-model="orgCode" />
+                    <div>
+                        <span>输入内容为： orgName:{{orgName}} orgCode: {{orgCode}}</span>
+                    </div>
+                </div>
+
+                <button type="submit" ng-show="data">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

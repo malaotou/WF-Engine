@@ -1,0 +1,2 @@
+WFInstance.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper

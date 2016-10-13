@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<this:WFInstance xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:bgvwcv="clr-namespace:BOC.GSP.V2.WF.Common.Variable;assembly=BOC.GSP.V2.WF.Common" xmlns:local="clr-namespace:BOC.GSP.V2.WF.Engine.Act;assembly=BOC.GSP.V2.WF.Engine" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:BOC.GSP.V2.WF.Engine;assembly=BOC.GSP.V2.WF.Engine" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <this:WFInstance.para>
+    <InArgument x:TypeArguments="bgvwcv:ActivityPara">
+      <mca:CSharpValue x:TypeArguments="bgvwcv:ActivityPara">new ActivityPara()</mca:CSharpValue>
+    </InArgument>
+  </this:WFInstance.para>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>BOC.GSP.V2.WF.Server.WFInstance_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>BOC.GSP.V2.WF.Common.Variable</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Activities.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>BOC.GSP.V2.WF.Common</AssemblyReference>
+      <AssemblyReference>BOC.GSP.V2.WF.DAL</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>BOC.GSP.V2.WF.Server</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <this:WFInstance.Implementation>
+    <StateMachine DisplayName="单节点工作流" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+      <StateMachine.InitialState>
+        <State x:Name="__ReferenceID0" DisplayName="处理" sap2010:WorkflowViewState.IdRef="State_2">
+          <State.Entry>
+            <If sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <mca:CSharpValue x:TypeArguments="x:Boolean">para.ActType==1</mca:CSharpValue>
+                </InArgument>
+              </If.Condition>
+              <If.Then>
+                <local:InitiatorAct DisplayName="发起人" sap2010:WorkflowViewState.IdRef="InitiatorAct_1">
+                  <local:InitiatorAct.activityPara>
+                    <InOutArgument x:TypeArguments="bgvwcv:ActivityPara">
+                      <mca:CSharpReference x:TypeArguments="bgvwcv:ActivityPara">para</mca:CSharpReference>
+                    </InOutArgument>
+                  </local:InitiatorAct.activityPara>
+                </local:InitiatorAct>
+              </If.Then>
+              <If.Else>
+                <local:NormalApproverAct DisplayName="一般处理人" sap2010:WorkflowViewState.IdRef="NormalApproverAct_1">
+                  <local:NormalApproverAct.Para>
+                    <InArgument x:TypeArguments="bgvwcv:ActivityPara">
+                      <mca:CSharpValue x:TypeArguments="bgvwcv:ActivityPara">para</mca:CSharpValue>
+                    </InArgument>
+                  </local:NormalApproverAct.Para>
+                </local:NormalApproverAct>
+              </If.Else>
+            </If>
+          </State.Entry>
+          <State.Exit>
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <local:TrackAct DisplayName="登记运行记录" sap2010:WorkflowViewState.IdRef="TrackAct_2">
+                <local:TrackAct.Para>
+                  <InArgument x:TypeArguments="bgvwcv:ActivityPara">
+                    <mca:CSharpValue x:TypeArguments="bgvwcv:ActivityPara">para</mca:CSharpValue>
+                  </InArgument>
+                </local:TrackAct.Para>
+              </local:TrackAct>
+            </Sequence>
+          </State.Exit>
+          <State.Transitions>
+            <Transition DisplayName="T1" sap2010:WorkflowViewState.IdRef="Transition_1">
+              <Transition.To>
+                <State x:Name="__ReferenceID1" DisplayName="处理结束" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                  <State.Entry>
+                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <If sap2010:WorkflowViewState.IdRef="If_2">
+                        <If.Condition>
+                          <InArgument x:TypeArguments="x:Boolean">
+                            <mca:CSharpValue x:TypeArguments="x:Boolean">para.ActType!=2</mca:CSharpValue>
+                          </InArgument>
+                        </If.Condition>
+                        <If.Then>
+                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <ForEach x:TypeArguments="bgvwcv:NextActivity" DisplayName="ForEach&lt;NextActivity&gt;" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+                              <ForEach.Values>
+                                <InArgument x:TypeArguments="scg:IEnumerable(bgvwcv:NextActivity)">
+                                  <mca:CSharpValue x:TypeArguments="scg:IEnumerable(bgvwcv:NextActivity)">para.NextAct</mca:CSharpValue>
+                                </InArgument>
+                              </ForEach.Values>
+                              <ActivityAction x:TypeArguments="bgvwcv:NextActivity">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="bgvwcv:NextActivity" Name="item" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="ForEach" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="bgvwcv:ActivityPara" Name="nextPara">
+                                      <Variable.Default>
+                                        <mca:CSharpValue x:TypeArguments="bgvwcv:ActivityPara">para.clone()</mca:CSharpValue>
+                                      </Variable.Default>
+                                    </Variable>
+                                  </Sequence.Variables>
+                                  <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="s:Guid">
+                                        <mca:CSharpReference x:TypeArguments="s:Guid">nextPara.ProcessID</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="s:Guid">
+                                        <mca:CSharpValue x:TypeArguments="s:Guid">para.ProcessID</mca:CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="s:Guid">
+                                        <mca:CSharpReference x:TypeArguments="s:Guid">nextPara.ProcessInstanceId</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="s:Guid">
+                                        <mca:CSharpValue x:TypeArguments="s:Guid">para.ProcessInstanceId</mca:CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap2010:WorkflowViewState.IdRef="Assign_3">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpReference x:TypeArguments="x:Int32">nextPara.ActId</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpValue x:TypeArguments="x:Int32">item.NextActId</mca:CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap2010:WorkflowViewState.IdRef="Assign_4">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpReference x:TypeArguments="x:Int32">nextPara.ActType</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpValue x:TypeArguments="x:Int32">item.NextActExecType</mca:CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap2010:WorkflowViewState.IdRef="Assign_5">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <mca:CSharpReference x:TypeArguments="x:String">nextPara.ADUser</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">malei</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap2010:WorkflowViewState.IdRef="Assign_6">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="scg:List(bgvwcv:NextActivity)">
+                                        <mca:CSharpReference x:TypeArguments="scg:List(bgvwcv:NextActivity)">nextPara.NextAct</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="scg:List(bgvwcv:NextActivity)">
+                                        <mca:CSharpValue x:TypeArguments="scg:List(bgvwcv:NextActivity)">null</mca:CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap2010:WorkflowViewState.IdRef="Assign_7">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpReference x:TypeArguments="x:Int32">nextPara.ExecType</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpValue x:TypeArguments="x:Int32">item.ApproveType</mca:CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="FInal　" />
+                                  <local:CreateSubAct sap2010:WorkflowViewState.IdRef="CreateSubAct_1">
+                                    <local:CreateSubAct.para>
+                                      <InOutArgument x:TypeArguments="bgvwcv:ActivityPara">
+                                        <mca:CSharpReference x:TypeArguments="bgvwcv:ActivityPara">nextPara</mca:CSharpReference>
+                                      </InOutArgument>
+                                    </local:CreateSubAct.para>
+                                  </local:CreateSubAct>
+                                </Sequence>
+                              </ActivityAction>
+                            </ForEach>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Other" />
+                            <local:FinishAct sap2010:WorkflowViewState.IdRef="FinishAct_1">
+                              <local:FinishAct.Para>
+                                <InArgument x:TypeArguments="bgvwcv:ActivityPara">
+                                  <mca:CSharpValue x:TypeArguments="bgvwcv:ActivityPara">para</mca:CSharpValue>
+                                </InArgument>
+                              </local:FinishAct.Para>
+                            </local:FinishAct>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </State.Entry>
+                </State>
+              </Transition.To>
+            </Transition>
+          </State.Transitions>
+        </State>
+      </StateMachine.InitialState>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <StateMachine.Variables>
+        <Variable x:TypeArguments="bgvwcv:ActivityPara" Name="varPara">
+          <Variable.Default>
+            <mca:CSharpValue x:TypeArguments="bgvwcv:ActivityPara">para.clone()</mca:CSharpValue>
+          </Variable.Default>
+        </Variable>
+      </StateMachine.Variables>
+      <sads:DebugSymbol.Symbol>9xAhvgF6g42FtESZYp+9XAkDfEU6XFdvcmtGb2xkZXJc5Lit5Zu96ZO26KGMQ1JNXDA0IENvZGVcQk9DLkdTUC5WMi5WM1xCT0NHU1AyUHJvamVjdFxCT0MuR1NQLlYyXFdGXEVuZ2luZVxCT0MuR1NQLlYyLldGLkVuZ2luZVxXRkluc3RhbmNlLnhhbWw0FQcVYgECOQOAAhICAQH7AQv7AWADAYABOwf0AQ8CAWxlD/ABFwIBAj0LVRACAXRYC2AWAgFvZxPuAR4CAQRAEUBfAgF1RA9KJAIBfE0PUykCAXhZDV8eAgFwaBXtARoCAQVHFUdqAgF9UBVQYgIBeVwTXGACAXFrG2tpAgEGbxnfASQCARDiARnrASQCAQlwG94BJQIBEeMBG+MBYwIBDuQBG+oBLQIBCnMhc4cBAgFpeh/cASoCARLjAVnjAWACAQ/nASHnAW4CAQt+J358AgETggEhjQEqAgFejgEhmQEqAgFTmgEhpQEqAgFIpgEhsQEqAgE9sgEhuwEqAgE2vAEhxwEqAgEryAEh0wEqAgEg1AEh1AFqAgEe1QEh2wE2AgEYigEnigFxAgFkhQEnhQF9AgFflgEnlgF5AgFZkQEnkQGFAQIBVKIBJ6IBcgIBTp0BJ50BegIBSa4BJ64BeAIBQ6kBJ6kBfAIBPrkBTLkBUQIBPLUBJ7UBfAIBN8QBJ8QBfgIBMb8BJ78BkgECASzQASfQAXQCASbLASfLAX0CASHUAV/UAWcCAR/YASfYAYABAgEZ</sads:DebugSymbol.Symbol>
+    </StateMachine>
+  </this:WFInstance.Implementation>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="InitiatorAct_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="NormalApproverAct_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="464,203">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="TrackAct_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="222,146">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,59" />
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="242,59" />
+      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="242,59" />
+      <sap2010:ViewStateData Id="Assign_4" sap:VirtualizedContainerService.HintSize="242,59" />
+      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="242,59" />
+      <sap2010:ViewStateData Id="Assign_6" sap:VirtualizedContainerService.HintSize="242,59" />
+      <sap2010:ViewStateData Id="Assign_7" sap:VirtualizedContainerService.HintSize="242,59" />
+      <sap2010:ViewStateData Id="WriteLine_5" sap:VirtualizedContainerService.HintSize="242,59" />
+      <sap2010:ViewStateData Id="CreateSubAct_1" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="264,938">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_1" sap:VirtualizedContainerService.HintSize="294,1083" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="200,49">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_4" sap:VirtualizedContainerService.HintSize="211,59" />
+      <sap2010:ViewStateData Id="FinishAct_1" sap:VirtualizedContainerService.HintSize="211,22" />
+      <sap2010:ViewStateData Id="Sequence_8" sap:VirtualizedContainerService.HintSize="233,245">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_2" sap:VirtualizedContainerService.HintSize="464,388" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="486,512">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_1" sap:VirtualizedContainerService.HintSize="512,624">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">453,19.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">297,59.15 327,59.15 327,56.1 453,56.1</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">48</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">45</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_2" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">183,19.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="StateMachine_1" sap:VirtualizedContainerService.HintSize="614,636">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">20,12.5</av:Point>
+            <x:Double x:Key="StateContainerWidth">600</x:Double>
+            <x:Double x:Key="StateContainerHeight">600</x:Double>
+            <av:PointCollection x:Key="ConnectorLocation">80,50 110,50 110,56.1 183,56.1</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="BOC.GSP.V2.WF.Server.WFInstance_1" sap:VirtualizedContainerService.HintSize="654,716" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</this:WFInstance>

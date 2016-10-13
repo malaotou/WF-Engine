@@ -1,0 +1,4 @@
+obj\Debug\_BOC.GSP.V2.WF.Engine.g.cs
+obj\Debug\WFInstance.g.cs
+obj\Debug\BOC.GSP.V2.WF.Engine_WFInstance_BeforeInitializeComponentHelper.cs
+E:\WorkFolder\中国银行CRM\04 Code\BOC.GSP.V2.V3\BOCGSP2Project\BOC.GSP.V2\WF\Engine\BOC.GSP.V2.WF.Engine\obj\Debug\BOC.GSP.V2.WF.Engine_WFInstance_CompiledExpressionRoot.cs
